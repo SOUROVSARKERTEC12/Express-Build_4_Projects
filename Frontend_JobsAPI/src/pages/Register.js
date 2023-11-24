@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useGlobalContext } from '../context/appContext';
 import {Navigate} from 'react-router-dom';
 import FormRow from '../components/FormRow';
-// import logo from '../assets/logo.svg';
+import job from '../assets/job.png'
 
 function Register() {
   const [values, setValues] = useState({
@@ -42,7 +42,7 @@ function Register() {
             </div>
           )}
           <form className='form' onSubmit={onSubmit}>
-            <img src="" alt='jobio' className='logo' />
+            <img src={job} alt='jobio' className='logo' width="50" />
             <h4>{values.isMember ? 'Login' : 'Register'}</h4>
             {/* name field */}
             {!values.isMember && (

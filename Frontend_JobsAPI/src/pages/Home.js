@@ -2,7 +2,8 @@ import {Link, Navigate} from 'react-router-dom';
 import styled from 'styled-components';
 // import main from '../assets/main.svg';
 import { useGlobalContext } from '../context/appContext';
-// import logo from '../assets/logo.svg';
+import job from '../assets/job.png'
+
 function Home() {
   const { user } = useGlobalContext();
 
@@ -11,7 +12,7 @@ function Home() {
       {user && <Navigate to='/dashboard'/> }
       <Wrapper>
         <nav>
-          <img src="" alt='jobs app' />
+          <img src={job} alt='jobs app' width="50" height="50" />
         </nav>
         <div className='container page'>
           <div className='info'>

@@ -1,8 +1,8 @@
 import{ useState } from 'react';
 import styled from 'styled-components';
-// import logo from '../assets/logo.svg';
 import { FaUserCircle, FaCaretDown } from 'react-icons/fa';
 import { useGlobalContext } from '../context/appContext';
+import job from '../assets/job.png'
 
 const Navbar = () => {
   const { user, logout } = useGlobalContext();
@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <Wrapper>
       <div className='nav-center'>
-        <img src='' alt='jobs app' />
+        <img src={job} alt='jobs app' width="50" />
         {user && (
           <div className='btn-container'>
             <button className='btn' onClick={() => setShowLogout(!showLogout)}>
